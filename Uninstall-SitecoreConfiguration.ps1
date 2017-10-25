@@ -8,7 +8,7 @@ Param(
 	[string]$SqlAccount,
 	[string]$SqlPassword
 )
-
+#Write-TaskHeader function modified from SIF
 Function Write-TaskHeader {
     param(
         [Parameter(Mandatory=$true)]
