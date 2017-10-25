@@ -9,7 +9,6 @@ Param(
 	[string]$SqlPassword
 )
 
-#Write-TaskHeader function from SitecoreInstallFramework
 Function Write-TaskHeader {
     param(
         [Parameter(Mandatory=$true)]
@@ -36,9 +35,9 @@ Function Write-TaskHeader {
 
         $value = " $value "
         if($padright){
-            $value = $value.PadRight($length, '-')
+            $value = $value.PadRight($length, '*')
         } else {
-            $value = $value.PadLeft($length, '-')
+            $value = $value.PadLeft($length, '*')
         }
 
         return $prefix + $value + $postfix
@@ -53,7 +52,7 @@ Function Write-TaskHeader {
 
     $message = ($leftString + $rightString)
     Write-Host ''
-    Write-Host $message -ForegroundColor 'Green'
+    Write-Host $message -ForegroundColor 'Red'
 }
 
 Function Remove-Service{
