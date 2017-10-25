@@ -147,6 +147,7 @@ $sqlPrefix = $("DROP DATABASE IF EXISTS [$($Prefix)")
 
 Write-Host $("Dropping database $($Prefix)_Core")
 $corePrefix = $("$($sqlPrefix)_Core]")
+Write-Host $("Query: $($corePrefix)")
 invoke-sqlcmd -ServerInstance $SqlServer -U $SqlAccount -P $SqlPassword -Query $corePrefix -ErrorAction stop
 
 Write-Host $("Dropping database $($Prefix)_ExperienceForms")
