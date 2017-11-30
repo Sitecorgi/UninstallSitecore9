@@ -1,12 +1,12 @@
 #define parameters
 Param(
-	[string]$Prefix,	
-	[string]$SitecoreSiteName,
-	[string]$SolrService,
-	[string]$PathToSolr,
-	[string]$SqlServer,
-	[string]$SqlAccount,
-	[string]$SqlPassword
+	[string]$Prefix = "sc9",	
+	[string]$SitecoreSiteName = "sc9.local",
+	[string]$SolrService = "solrJetty",
+	[string]$PathToSolr = "C:\Solr\solr-6.6.0\apache-solr",
+	[string]$SqlServer = ".\SQLSERVER",
+	[string]$SqlAccount = "sa",
+	[string]$SqlPassword = "secret"
 )
 #Write-TaskHeader function modified from SIF
 Function Write-TaskHeader {
