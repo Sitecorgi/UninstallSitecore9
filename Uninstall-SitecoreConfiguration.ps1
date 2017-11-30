@@ -60,7 +60,7 @@ Function Remove-Service{
 	param(
 		[string]$serviceName
 	)
-	if(Get-Service "My Service" -ErrorAction SilentlyContinue){
+	if(Get-Service $serviceName -ErrorAction SilentlyContinue){
 		sc.exe delete $serviceName
 	}
 }
