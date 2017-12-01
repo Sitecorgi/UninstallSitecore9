@@ -1,0 +1,64 @@
+{ 
+     "Parameters" : {
+        "Prefix": {
+            "Type": "string",
+            "DefaultValue": "sc9",
+            "Description": "The prefix used by the Sitecore instance"
+        },
+        "SitecoreSiteName" : {
+            "Type": "string",
+            "DefaultValue": "sc9.local",
+            "Description": "The hostname used by the Sitecore instance"
+        },
+        "SolrService" : {
+            "Type": "string",
+            "DefaultValue": "solrJetty",
+            "Description": "The name of the solr service"
+        },
+        "PathToSolrCores" : {
+            "Type": "string",
+            "DefaultValue": "C:\\Solr\\solr-6.6.0\\apache-solr\\server\\solr",
+            "Description": "The path to the solr cores"
+        },
+        "PathToWebRoot" : {
+            "Type": "string",
+            "DefaultValue": "C:\\inetpub\\wwwroot\\",
+            "Description": "The path the the webroot"
+        },     
+        "SqlAccount" : {
+            "Type": "string",
+            "DefaultValue": "sa",
+            "Description": "The SQL account used to log into SQL"
+        },
+        "SqlPassword" : {
+            "Type": "string",
+            "DefaultValue": "password!",
+            "Description": "The password used to log into SQL"
+        },
+        "SqlServer" : {
+            "Type": "string",
+            "DefaultValue": ".\\SQLSERVER",
+            "Description": "The SQL server instance name"
+        }
+     },
+     "Modules" : [
+         "Uninstall-SitecoreConfiguration.psm1"
+     ],
+     "Variables" : {
+     },
+     "Tasks" : {
+         "Uninstall Sitecore Installation" : {
+             "Type" : "UninstallSitecore",
+             "Params" : {
+                 "Prefix" : "[parameter('Prefix')]",
+                 "SitecoreSiteName" : "[parameter('SitecoreSiteName')]",
+                 "PathToSolrCores" : "[parameter('PathToSolrCores')]",
+                 "PathToWebRoot" : "[parameter('PathToWebRoot')]",
+                 "SolrService" : "[parameter('SolrService')]",
+                 "SqlAccount" : "[parameter('SqlAccount')]",
+                 "SqlPassword" : "[parameter('SqlPassword')]",
+                 "SqlServer" : "[parameter('SqlServer')]"
+             }
+         }
+     }
+}
