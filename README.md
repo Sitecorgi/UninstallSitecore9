@@ -1,7 +1,17 @@
-# UninstallSitecore9
-Short and simple PowerShell Script to uninstall a Sitecore9 instance from a local development environment setup.  This can also be run if your installation fails to complete and your environment requires cleaning up.
+# Uninstall Sitecore 9
 
-n.b this will not remove the solr services although that can be added with a very small modification to the script
+Sitecore Install Framework (SIF) to uninstall a Sitecore9 instance from a local development environment setup.  This can also be run if your installation fails to complete and your environment requires cleaning up.
+
+This module should be place in a folder in the modules directory of your PowerShell installation, typically C:\Program Files\WindowsPowerShell\Modules
+
+n.b this will not remove the solr services
+
+To use:
+
+* Please ensure that SIF is installed
+* Modify the parameters in Install-Config.json to suit your needs
+* Open a PS console at the location of your Install-Config.json
+* The cmdlet to invoke is Install-SitecoreConfiguration .\Install-Config.json
 
 ## Parameters
 
@@ -12,6 +22,3 @@ n.b this will not remove the solr services although that can be added with a ver
 * SqlServer - _The name of your SQL server instance_
 * SqlAccount - _Your SQL account, typically the one used to create the databases_
 * SqlPassword -  _Your SQL account's password_
-
-
-
