@@ -6,7 +6,7 @@ This module should be place in a folder in the modules directory of your PowerSh
 
 n.b this will not remove the solr services
 
-To use:
+## Usage
 
 * Please ensure that SIF is installed
 * Modify the parameters in Install-Config.json to suit your needs
