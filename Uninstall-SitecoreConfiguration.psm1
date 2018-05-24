@@ -143,6 +143,8 @@ Function Uninstall-Sitecore {
     Remove-Database -dbName $("$($Prefix)_Xdb.Collection.Shard0") -server $SqlServer -user $SqlAccount -password $SqlPassword
     Remove-Database -dbName $("$($Prefix)_Xdb.Collection.Shard1") -server $SqlServer -user $SqlAccount -password $SqlPassword
     Remove-Database -dbName $("$($Prefix)_Xdb.Collection.ShardMapManager") -server $SqlServer -user $SqlAccount -password $SqlPassword
+    Remove-Database -dbName $("$($Prefix)_Messaging") -server $SqlServer -user $SqlAccount -password $SqlPassword
+    Remove-Database -dbName $("$($Prefix)_Sessions") -server $SqlServer -user $SqlAccount -password $SqlPassword
 
     Write-Host "Databases dropped successfully"
     pop-location
